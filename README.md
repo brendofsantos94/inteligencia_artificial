@@ -5,6 +5,10 @@ Percurso individual para Ensino Médio, reconstruído do documento fornecido em 
 
 ## Abrir a aplicação
 
+Site publicado: [IA para Aprender no GitHub Pages](https://brendofsantos94.github.io/inteligencia_artificial/).
+
+Para executar localmente:
+
 Na pasta deste README, execute:
 
 ```powershell
