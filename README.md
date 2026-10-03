@@ -3,6 +3,19 @@
 Percurso individual para Ensino Médio, reconstruído do documento fornecido em 2 de outubro de
 2026. A implementação técnica contém início, nivelamento, Explorador, Usuário e conclusão.
 
+## Pergunta Norteadora
+Como promover o uso ativo, crítico, responsável e autoral da Inteligência Artificial como ferramenta de aprendizagem entre estudantes do Ensino Médio?
+
+## Público alvo
+Alunos do Ensino Médio
+
+## Habilidades da BNCC
+EM13CO08: Entender como mudanças na tecnologia afetam a segurança, incluindo novas maneiras de preservar sua privacidade e dados pessoais on-line.  
+EM13CO10: Conhecer os fundamentos da Inteligência Artificial, comparando-a com a inteligência humana, analisando suas potencialidades, riscos e limites.
+
+## As habilidades acima, foram escolhidas para trabalhar em cima da dificuldade que o aluno tem para utilizar a I.A. Generativa de forma crítica e ativa dentro do ambiente escolar.
+Resutado esperado: Ao término da trilha, espera-se que aluno desenvolva a habilidae de usá-la para o ajudar a aprender sobre assuntos de aula e até mesmo criar conteúdos que melhorem a sua compreensão acerca de um problema. 
+
 ## Abrir a aplicação
 
 Site publicado: [IA para Aprender no GitHub Pages](https://brendofsantos94.github.io/inteligencia_artificial/).
