@@ -53,4 +53,4 @@ conferência manual. Não se declara conformidade integral WCAG nem metas pedag�
 
 Os scripts prepare-spec.py, prepare-plan.py, prepare-tasks.py e create-pages.py registram a
 reconstrução inicial. Não os execute sobre documentos revisados: eles recriam artefatos e podem
-substituir revisões e marcadores de conclusão.
+substituir revisões e marcadores de conclusão.QEWFWEFWFWEWE
