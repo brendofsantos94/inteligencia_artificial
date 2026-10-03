@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "US5: entrada, subdiretório e primeiro foco por teclado",
+    "US1: bloqueio vazio, navegação, recarga, edição e diagnóstico neutro",
+    "US2: erro específico, tentativa, feedback >700ms, módulos sequenciais e revisão",
+    "US2: rascunho, reprovação, espaços rejeitados e aprovação recuperável",
+    "US1: diagnóstico não pode ser refeito após iniciar trilha",
+    "US3: cinco módulos, cinco produções, rubrica e conclusão sem ressubmissão",
+    "US4: reinício cancelado preserva; confirmado limpa somente projeto",
+    "US4: acesso direto e estado corrompido recuperam com aviso",
+    "FR-024: armazenamento indisponível mantém interação e explica limite",
+    "SC-009: cinco páginas em 320px e equivalente a zoom 200%, sem overflow",
+    "FR-031: jornada Usuário inteira com teclado e foco após mudanças",
+    "FR-032: estados de módulo e feedback em 320px e contraste de tokens"
+  ],
+  "errors": [],
+  "zoom": "CSS zoom 200%, viewport 640, equivalent logical width 320; not native browser Ctrl+"
+}

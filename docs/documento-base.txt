@@ -1,0 +1,407 @@
+Reconstrução do Spec Kit para o projeto IA para Aprender
+Da página pronta às especificações e à geração de novas páginas
+Documento de trabalho  |  2 de outubro de 2026
+Objetivo do documento
+Este documento reconstrói as etapas constitution, specify, clarify, plan, tasks e analyze a partir do produto educacional já criado. As páginas de início, nivelamento, Explorador, Usuário e conclusão fornecem evidências para recuperar as decisões de produto e preparar uma nova implementação guiada por especificações verificáveis.
+O resultado esperado é um conjunto coerente de princípios, requisitos, decisões, plano e tarefas que permita gerar novas páginas para a mesma jornada. A aparência e o comportamento existentes são referências; as lacunas encontradas devem ser corrigidas na versão reconstruída.
+Percurso de reconstrução
+Produto existente → observação das funcionalidades → constitution → specify → clarify → plan → tasks → analyze → implementação das novas páginas → validação.
+Analyze verifica a consistência dos documentos. A geração das páginas acontece depois, na implementação. Os prompts deste documento são orientações de execução; sua presença não significa que todos os comandos já foram executados.
+Página existente
+Função no percurso
+index.html
+Apresentar propósito e iniciar nivelamento
+nivelamento.html
+Classificar perfil por diagnóstico
+explorador.html
+Construir fundamentos e verificação crítica
+usuario.html
+Usar IA para estudar e produzir com autoria
+conclusao.html
+Sintetizar aprendizagem e oferecer reinício global
+
+A documentação revisada contém 39 requisitos funcionais, nove critérios de sucesso e cinco histórias de usuário. O código original permanece como referência. As correções propostas e as validações pendentes estão distinguidas nas etapas seguintes.
+
+1 Constitution
+Finalidade: recuperar os princípios que orientam a aprendizagem e limitam as decisões da nova versão. A referência é .specify/memory/constitution.md, versão 1.0.0. A data formal de ratificação continua pendente.
+Princípios aplicados ao produto
+1. Aprendizagem em primeiro lugar. Usar IA para investigar e compreender, preservando o pensamento do estudante.
+2. Uso crítico da IA. Questionar respostas, examinar evidências e comparar fontes antes de concluir.
+3. Autonomia e autoria. Exigir decisões e produção própria, especialmente nos desafios.
+4. Progressão pedagógica. Manter Conhecer → Compreender → Questionar → Verificar → Aprender → Criar.
+5. Clareza e objetividade. Usar instruções e textos adequados ao Ensino Médio.
+6. Aprendizagem pela prática. Oferecer situações-problema, exemplos e aplicação de conceitos.
+7. Feedback formativo. Explicar acerto e erro, orientar revisão e permitir nova tentativa.
+8. Responsabilidade e segurança. Minimizar dados pessoais e respeitar privacidade e autoria.
+9. Alinhamento à BNCC Computação. Associar conteúdo às habilidades do projeto e registrar revisão pedagógica.
+10. Consistência pedagógica. Incluir somente funcionalidades que contribuam para os objetivos das trilhas.
+Regras de saída desta etapa
+Cada atividade e desafio deve informar objetivo, etapa e habilidade BNCC. A etapa Criar deve aparecer nos desafios das duas trilhas. A constatação de uma lacuna no produto não autoriza reduzir esses princípios. Alterações de governança precisam de justificativa, versionamento e revisão.
+Texto para executar a etapa
+$speckit-constitution
+Revise a constituição do projeto IA para Aprender com base nos princípios já registrados. Preserve aprendizagem, pensamento crítico, autoria, progressão em seis etapas, prática, feedback, privacidade e BNCC Computação. Registre a ratificação somente quando houver confirmação. Identifique impactos sobre as novas páginas e sobre a revisão das trilhas.
+Entrega: constituição do projeto com regras aplicáveis. Aceite: princípios claros, sem contradições com a finalidade educacional e sem data de aprovação inventada.
+
+2 Specify
+Finalidade: transformar o que se observa nas páginas em necessidades do estudante, requisitos e cenários de aceitação. A fonte normativa é specs/001-trilhas-ia/spec.md; os documentos de paginas/ detalham a mesma funcionalidade.
+Descrição da funcionalidade reconstruída
+IA para Aprender é um percurso individual em português para estudantes do Ensino Médio. O nivelamento recomenda Explorador ou Usuário. Cada trilha tem cinco módulos com conteúdo, exemplo, atividade e feedback. Os desafios integram análise crítica e produção autoral. A conclusão reforça responsabilidade e permite reiniciar todo o percurso com confirmação.
+História
+Nível
+Valor para o estudante
+US1 Nivelamento
+P1
+Receber recomendação adequada ao uso crítico da IA
+US2 Explorador
+P1
+Compreender IA, seus limites e como verificar respostas
+US3 Usuário
+P1
+Estudar com IA e criar preservando autoria
+US4 Progressão
+P2
+Entender a etapa atual, revisar e concluir o percurso
+US5 Entrada
+P1
+Compreender proposta, trilhas e cuidados antes de iniciar
+
+Fronteiras do escopo
+Inclui diagnóstico, trilhas, práticas simuladas, desafios, progresso no navegador e revisão de módulos. Não inclui conta, painel docente, sincronização entre dispositivos, certificado, conversa livre com IA, notas escolares, rankings ou correção automática da qualidade de textos.
+Exemplo de cenário verificável
+Dado um estudante com cinco acertos nas oito questões pontuáveis e dois nas três críticas, quando finaliza o diagnóstico, então recebe o perfil Usuário, a explicação da recomendação e a ação para iniciar a trilha. Se qualquer limite não for atingido, recebe Explorador.
+Texto para executar a etapa
+$speckit-specify
+Atualize a funcionalidade 001-trilhas-ia a partir das cinco páginas existentes e dos documentos disponibilizados. Descreva necessidades, histórias priorizadas, requisitos funcionais, casos extremos e critérios mensuráveis. Preserve os IDs existentes e diferencie comportamento observado de correções necessárias. Não inclua escolhas de tecnologia na especificação. Mantenha cinco módulos por trilha e explicite os desafios autorais.
+Entrega: spec.md e detalhamentos das cinco páginas. Aceite: requisitos testáveis, cenários completos, escopo delimitado e premissas identificadas. Os requisitos consolidados estão no apêndice deste documento.
+
+3 Specify para início e nivelamento
+Página inicial
+A página inicial apresenta o público Ensino Médio, o uso produtivo de IA generativa e as duas trilhas. A ação NIVELAMENTO inicia o diagnóstico. A nova versão deve explicar o uso de exemplos simulados, orientar proteção de dados e preservar progresso ao retornar ao início. Requisitos principais: FR-021, FR-023 e FR-026.
+Aceitação: ao ler a entrada, o estudante identifica propósito e trilhas; por teclado, consegue iniciar sem cadastro; em retorno com progresso, nenhuma resposta é apagada. A interface permanece utilizável em 320 px e com zoom de 200%.
+Nivelamento e regra de classificação
+O diagnóstico tem dez questões exibidas uma por vez. As questões 1 e 2 descrevem frequência e finalidade de uso e não pontuam. As questões 3 a 10 pontuam; as questões 3, 5 e 8 compõem o indicador crítico. As respostas mais recentes enviadas substituem as anteriores até a finalização.
+Resultado total
+Resultado crítico
+Recomendação
+5 ou mais de 8
+2 ou mais de 3
+Usuário
+Qualquer combinação que não atenda aos dois limites
+Qualquer combinação que não atenda aos dois limites
+Explorador
+
+O resultado apresenta perfil, motivo, totais e correção das oito pontuáveis. Hábitos pessoais são identificados como respostas diagnósticas, sem julgamento de certo ou errado. Não há gabarito antecipado durante o preenchimento.
+Estados que a nova página deve tratar
+• Questão sem resposta: impedir avanço e orientar a alternativa pendente.
+• Diagnóstico parcial: recuperar respostas e posição quando o salvamento funciona.
+• Resultado final: oferecer a trilha correspondente e consulta da devolutiva.
+• Refazer: permitido após resultado e antes do primeiro acesso permitido à trilha, com confirmação.
+• Trilha iniciada: resultado consultável, mas refazer diagnóstico bloqueado.
+• Falha de armazenamento: avisar sobre limites de retomada e mudança de página.
+Casos mínimos de teste: 5/2 → Usuário; 5/1 → Explorador; 4/3 → Explorador; 8/3 → Usuário. Alterar apenas as duas diagnósticas não deve mudar os totais. Requisitos principais: FR-001 a FR-008a, FR-019, FR-024 e FR-033.
+
+4 Specify para a trilha Explorador
+Objetivo: construir fundamentos, reconhecer limites da IA e praticar verificação. Acesso após diagnóstico com perfil Explorador. Usuário é liberada somente após concluir os cinco módulos e o desafio.
+Módulo
+Objetivo central
+Etapa
+BNCC
+1 O que é Inteligência Artificial
+Reconhecer IA e usos cotidianos
+Conhecer
+EM13CO10
+2 Como a IA responde
+Entender respostas baseadas em padrões
+Compreender
+EM13CO10
+3 A IA também erra
+Identificar erros e referências suspeitas
+Questionar
+EM13CO10
+4 Verifique antes de acreditar
+Aplicar Verifique Examine e Reflita
+Verificar
+EM13CO10
+5 Uso responsável
+Proteger dados e respeitar autoria
+Aprender
+EM13CO08
+
+Atividades e feedback
+Cada módulo deve conter objetivo, explicação curta, exemplo e uma atividade contextualizada. A conclusão libera apenas o próximo módulo. Os concluídos permanecem revisáveis. Acerto e erro recebem explicação específica de uma a três frases; o feedback permanece até o estudante decidir continuar. Erro permite nova tentativa sem nota ou penalidade.
+Desafio integrador
+A resposta simulada afirma que o Brasil tem 30 estados, cita uma referência suspeita e generaliza que todas as capitais ficam no litoral. As quatro decisões tratam da informação a verificar, confiabilidade da referência, generalização e uso sem comparação. Todas exigem resposta; pelo menos três acertos permitem aprovação.
+A nova versão acrescenta uma síntese própria não vazia sobre o que o estudante verificaria antes de usar a resposta. Essa produção explicita a etapa Criar e recebe orientação formativa. O desafio deve exibir objetivo, etapa e habilidade EM13CO10. A síntese ainda não existe na página original.
+Transição e aceitação
+Após aprovação, oferecer iniciar Usuário agora ou voltar ao início, mantendo a liberação. Retornar à Explorador deve mostrar conclusão e convite sem exigir novo envio, com acesso à revisão dos módulos. Dois acertos bloqueiam conclusão; três ou quatro, acompanhados de síntese não vazia, satisfazem a regra de envio.
+Requisitos principais: FR-009, FR-010, FR-012 a FR-015, FR-017, FR-019a, FR-027, FR-029 e FR-030. A correspondência do conteúdo à BNCC exige revisão pedagógica; os códigos da tabela registram o mapeamento do projeto.
+
+5 Specify para Usuário e conclusão
+Objetivo: usar IA como apoio ativo ao estudo e criar com autoria. Acesso com perfil Usuário ou Explorador concluída. A decisão sobre a produção continua sendo do estudante.
+Módulo
+Objetivo central
+Etapa
+1 IA não precisa dar a resposta
+Pedir pistas e explicações
+Conhecer
+2 Faça perguntas melhores
+Explicitar objetivo contexto nível e ação
+Compreender
+3 Transforme a IA em tutora
+Pedir questões e feedback
+Questionar
+4 Aprenda verificando
+Verificar comparar e produzir
+Verificar
+5 Produza sem perder sua autoria
+Planejar escrever e revisar com decisões próprias
+Aprender
+
+O projeto associa os cinco módulos a EM13CO10. Metadados, feedback e revisão seguem as regras comuns das trilhas. O desafio aplica a etapa Criar e deve mostrar objetivo e habilidade.
+Estratégia de estudo no desafio
+Responder às cinco decisões, acertar pelo menos três e preencher os cinco campos com texto não vazio: solicitação para aprender, solicitação de exemplos, teste de conhecimentos, estratégia de verificação e produção própria. Uma rubrica deve orientar tema e objetivo, exemplo relacionado, raciocínio próprio, fonte e comparação, produto e decisões autorais.
+O preenchimento satisfaz a regra de envio, mas não comprova qualidade pedagógica. A revisão da estratégia usa rubrica e autoavaliação, sem correção semântica por IA. Rascunhos devem ser recuperáveis quando o salvamento funciona; resultados aprovados permanecem disponíveis após recarga.
+Conclusão do percurso
+Somente Usuário concluída libera a conclusão. A tela sintetiza perguntas, verificação de fontes, evidências e autoria. Voltar ao início preserva progresso. Reiniciar percurso exige confirmação: cancelar mantém tudo; confirmar limpa somente os dados deste projeto e retorna à primeira questão.
+Essa é a exceção ao bloqueio de reiniciar trilhas em andamento. Acesso direto à conclusão antes da hora deve encaminhar à etapa válida sem apagar dados. Requisitos principais: FR-011, FR-016, FR-018, FR-025, FR-028, FR-029 e FR-034.
+
+6 Clarify
+Finalidade: esclarecer decisões cujo significado não pode ser recuperado apenas pela aparência da página. As respostas históricas de 2026-10-01 estão registradas na especificação; as premissas da revisão de 2026-10-02 são inferências documentadas e não novas respostas do responsável.
+Tema
+Decisão de referência
+Origem
+Voltar e editar diagnóstico
+Permitido até finalizar; vale a resposta mais recente
+Decisão histórica
+Correção antecipada
+Gabarito somente ao final
+Decisão histórica
+Refazer diagnóstico
+Somente antes de iniciar a trilha recomendada
+Decisão histórica
+Módulos futuros
+Liberar próximo após concluir atual
+Decisão histórica
+Reinício em andamento
+Bloqueado; módulos concluídos podem ser revisados
+Decisão histórica
+Desafio Explorador
+Quatro respostas obrigatórias e mínimo de três acertos
+Comportamento observado
+Saída da Explorador
+Iniciar Usuário ou voltar ao início preservando liberação
+Comportamento observado
+Reinício global
+Permitido na conclusão com confirmação
+Comportamento observado
+Hábitos diagnósticos
+Apresentar sem certo ou errado
+Correção proposta
+Criação na Explorador
+Acrescentar síntese autoral formativa
+Correção por constituição
+
+Decisões que exigem registro de revisão
+Confirmar a data formal de ratificação da constituição; revisar o mapeamento curricular e os objetivos dos desafios; validar a rubrica de produção; registrar os limites da retomada quando o armazenamento falhar. Esses registros não devem ser substituídos por datas ou aprovações presumidas.
+Texto para executar a etapa
+$speckit-clarify
+Revise a especificação reconstruída de 001-trilhas-ia. Preserve as respostas históricas. Confira a distinção entre quatro respostas e três acertos no Explorador, reinício global somente ao fim, diagnósticas sem julgamento, revisão após conclusão e qualidade da estratégia. Registre decisões e sua origem; faça perguntas apenas sobre ambiguidades de alto impacto sem solução razoável nos documentos.
+Entrega: registro de esclarecimentos em spec.md. Aceite: regras de entrada, conclusão, retomada e reinício sem conflito; cada decisão identifica se foi confirmada, observada ou proposta.
+
+7 Plan
+Finalidade: decidir como construir as novas páginas conforme a especificação. A aplicação existente oferece uma base simples: HTML, CSS e JavaScript, sem backend, autenticação ou dependências externas.
+Organização técnica prevista
+Arquivo ou componente
+Responsabilidade
+Cinco arquivos HTML
+Entrada nivelamento duas trilhas e conclusão
+css/style.css
+Layout compartilhado contraste foco e responsividade
+js/data.js
+Questões módulos objetivos BNCC e devolutivas
+js/nivelamento.js
+Respostas edição classificação e resultado
+js/trilhas.js
+Módulos desafios revisão resultados e transições
+js/storage.js
+Validação persistência recuperação e limpeza
+js/conclusao.js
+Permissão da conclusão e reinício confirmado
+
+Dados e integridade
+Preservar respostas por ID, perfil, pontuação, acertos críticos, trilha atual, módulos concluídos e conclusão de desafios. Acrescentar rascunhos e resultados mínimos dos desafios com versão e migração. Progresso v1 válido deve ser preservado; resultados antigos sem texto salvo não podem receber conteúdo ou pontuação inventados.
+Validar coerência entre diagnóstico final, perfil, escores, posição liberada e sequência dos módulos. Não coletar identificação pessoal. As produções ficam no navegador e devem ser apagadas no reinício global confirmado.
+Persistência e acessibilidade
+Quando o armazenamento falhar, manter a interação na página atual e avisar que a memória não será transferida para outro documento HTML. Não transportar textos por parâmetros de URL. Usar controles semânticos, foco visível, mensagens textuais, contraste verificável, alvos de 44 × 44 px, largura de 320 px e zoom de 200%.
+Texto para executar a etapa
+$speckit-plan
+Planeje uma nova implementação estática de 001-trilhas-ia com cinco páginas HTML, CSS compartilhado e JavaScript sem dependências. Use a especificação reconstruída. Detalhe contratos de entrada e saída, estado, migração, rascunhos, feedback persistente, progressão, proteção de páginas e acessibilidade. Atualize research.md, data-model.md, contracts e quickstart.md. Mantenha caminhos relativos compatíveis com subdiretório.
+Entrega: plan.md e documentos de apoio. Aceite: cada requisito encontra solução; nenhuma solução contradiz constituição; revisão pedagógica e validação permanecem identificadas até execução.
+
+8 Tasks
+Finalidade: converter o plano em ações executáveis, com arquivos e dependências. No Spec Kit, o comando chama-se tasks. As tarefas antigas registram o histórico; a reconstrução usa T039 a T049, sem presumir que uma marcação antiga comprova a nova entrega.
+Tarefa
+Ação principal
+Situação
+T039
+Organizar especificação plano páginas e rastreabilidade
+Documentada
+T040
+Corrigir aviso e limites da persistência
+Pendente
+T041
+Validar estado e acesso às etapas
+Pendente
+T042
+Manter feedback específico até ação explícita
+Pendente
+T043
+Permitir revisão e retorno à trilha concluída
+Pendente
+T044
+Revisar conteúdos metadados e criação Explorador
+Pendente
+T045
+Salvar rascunhos resultados e migrar progresso
+Pendente
+T046
+Corrigir diagnósticas rubrica e expectativa inicial
+Pendente
+T047
+Ajustar foco mensagens e acessibilidade
+Pendente
+T048
+Executar validação funcional e de interface
+Pendente
+T049
+Revisar pedagogia e medir metas com estudantes
+Pendente
+
+Exemplo de tarefa rastreável
+- [ ] T042 [US2] Corrigir js/data.js e js/trilhas.js para explicar acerto e erro com conceito específico, manter a devolutiva até o estudante continuar e remover a recarga automática em 700 ms. Cobertura: FR-012, FR-013, FR-014, FR-031 e FR-035; também atende US3.
+Ordem de execução
+T039 → T040 → T041 → T042 → T043 → T044 → T045 → T046 → T047 → T048 → T049. As tarefas compartilham arquivos; não recebem marcador de paralelismo nesta revisão. Os caminhos e vínculos completos permanecem em tasks.md e rastreabilidade.md.
+Texto para executar a etapa
+$speckit-tasks
+Organize tarefas da reconstrução por fundamentos, histórias e validação. Preserve T001 a T049 e seu histórico. Use IDs únicos, arquivos exatos, dependências e referências FR e SC. Separe documentação concluída de código pendente. Não marque correções ou testes como concluídos sem evidência e não declare paralelas tarefas que alterem os mesmos arquivos.
+Entrega: tasks.md com ações verificáveis. Aceite: todos os requisitos têm cobertura, tarefas não se contradizem e nenhuma conclusão de teste é presumida.
+
+9 Analyze
+Finalidade: comparar spec.md, plan.md e tasks.md para localizar lacunas, ambiguidades e conflitos antes de gerar as novas páginas. A análise formal é somente leitura. O diagnóstico abaixo resume evidências estáticas já registradas; não representa execução de jornadas em navegador.
+Achado
+Impacto
+Cobertura corretiva
+Desafios sem todos os metadados e Explorador sem criação própria
+Crítico para princípios pedagógicos
+T044 T045 T049
+Erro genérico e acerto removido por recarga em 700 ms
+Crítico para feedback formativo
+T042 T048
+Hábitos pessoais recebem certo ou errado
+Alto para interpretação do diagnóstico
+T046 T048
+Memória não passa entre documentos HTML
+Alto para retomada e progresso
+T040 T048
+Validação de estado sem toda coerência necessária
+Alto para integridade do percurso
+T041 T048
+Após desafio formulário retorna e revisão some
+Alto para conclusão e revisão
+T043 T045 T048
+Rascunho não salvo e campos sem rubrica de qualidade
+Alto para autoria e aprendizagem
+T045 T046 T049
+Testes de interface e metas com estudantes sem resultados
+Alto para aceite da entrega
+T047 T048 T049
+
+Resultado e limite da cobertura
+A matriz documental vincula 39 de 39 requisitos e nove de nove critérios de sucesso a tarefas. Essa cobertura é planejada; não equivale a conformidade do código. Os conflitos sobre quatro respostas versus três acertos e reinício global foram esclarecidos nos documentos. As lacunas da implementação continuam pendentes.
+Texto para executar a etapa
+$speckit-analyze
+Faça análise somente leitura de spec.md, plan.md e tasks.md da funcionalidade 001-trilhas-ia. Confira constituição, cinco histórias, 39 requisitos, nove critérios e documentos por página. Relate inconsistências por gravidade e localização, tabela de cobertura e tarefas sem requisito. Considere metadados, Criar, feedback, diagnósticas, limites de memória, revisão pós-desafio e reinício. Não modifique arquivos nem confunda meta com resultado medido.
+Entrega: relatório de consistência. Aceite para avançar: conflitos críticos entre documentos corrigidos na etapa responsável e nova análise sem pendência impeditiva. Lacunas de implementação devem ter tarefa e cenário para verificação posterior.
+
+10 Das especificações às novas páginas
+A reconstrução termina quando os documentos permitem gerar uma nova versão das cinco páginas e verificar sua aderência. O ponto de passagem é uma especificação estável, um plano coerente e tarefas com cobertura; analyze não gera páginas.
+Sequência prática da nova implementação
+1. Preservar a versão original para comparação e trabalhar em uma cópia de implementação.
+2. Criar estado compartilhado, validação, recuperação e avisos de persistência.
+3. Construir início e nivelamento com diagnóstico neutro e classificação correta.
+4. Construir Explorador e Usuário com cinco módulos cada, feedback persistente e revisão.
+5. Implementar desafios com metadados, produção própria, rubrica, rascunhos e resultado recuperável.
+6. Construir conclusão com permissão válida e reinício global confirmado.
+7. Conferir teclado, foco, contraste, 320 px, zoom, links relativos e critérios pedagógicos.
+Exemplo de transformação de uma evidência em entrega
+Na página existente, o acerto desaparece após 700 ms. A constituição exige feedback formativo; specify registra FR-014; clarify fixa permanência até ação explícita; plan prevê botão Continuar; tasks define T042; analyze confere a consistência. Na nova página, o estudante lê a explicação e só avança ao acionar Continuar. T048 verifica esse comportamento no navegador.
+Texto para gerar as novas páginas
+$speckit-implement
+Implemente uma nova versão estática de IA para Aprender em uma cópia de trabalho, preservando a referência original. Use a constituição e os artefatos de 001-trilhas-ia, incluindo as cinco especificações de páginas. Execute T040 a T048 em ordem. Mantenha dez questões, regra de classificação por dois limites, duas trilhas de cinco módulos e desafios autorais. Corrija feedback, diagnósticas, estado, revisão, rascunhos e acessibilidade. Não acrescente chat com IA, contas, notas ou ranking. Registre testes efetivamente executados e deixe T049 pendente até a avaliação com estudantes.
+Depois da implementação, executar convergência e comparar páginas, requisitos e evidências. Este documento fornece o roteiro e as especificações para esse trabalho; a criação do Word não executa a nova implementação.
+
+Apêndice 1 Requisitos consolidados
+Requisitos da especificação revisada de 001-trilhas-ia. Os identificadores com letras preservam vínculos históricos. As regras abaixo orientam a nova versão; sua presença não atesta atendimento pelo código original.
+FR-001  O sistema deve permitir que estudantes iniciem o nivelamento e o refaçam somente após receberem a recomendação e antes de iniciarem a trilha recomendada.
+FR-002  O sistema deve apresentar um nivelamento com exatamente 10 questões, uma por vez.
+FR-003  O sistema deve identificar as duas primeiras questões como diagnósticas e excluí-las da pontuação de classificação.
+FR-004  O sistema deve registrar as respostas do nivelamento, permitir retomá-lo após interrupção e permitir ao estudante avançar e voltar livremente entre questões já respondidas.
+FR-004a  Até a finalização do nivelamento, o sistema deve permitir alterar qualquer resposta registrada e deve usar apenas a versão mais recente de cada resposta no cálculo da classificação.
+FR-005  O sistema deve calcular uma pontuação de 0 a 8 usando as oito questões pontuáveis.
+FR-006  O sistema deve avaliar três questões específicas de pensamento crítico.
+FR-007  O sistema deve classificar o estudante como Usuário somente se obtiver pelo menos 5 pontos e ao menos 2 acertos nas questões de pensamento crítico; nos demais casos, deve classificá-lo como Explorador.
+FR-008  O sistema deve apresentar o perfil obtido, uma explicação compreensível da recomendação, a trilha correspondente, acerto ou erro das oito questões pontuáveis e as duas respostas diagnósticas identificadas como não pontuáveis, sem gabarito de hábitos pessoais.
+FR-008a  Antes da finalização das 10 questões, o sistema deve não indicar acerto ou erro das respostas do nivelamento.
+FR-009  O sistema deve organizar as trilhas Explorador e Usuário em exatamente cinco módulos cada, com objetivo de aprendizagem explícito para cada módulo.
+FR-010  A trilha Explorador deve abranger conceito e exemplos de IA, geração por padrões, limitações e erros, verificação pelo método V-E-R e uso responsável.
+FR-011  A trilha Usuário deve abranger uso da IA para aprender, formulação de solicitações, IA como tutora, verificação e produção com autoria.
+FR-012  O sistema deve oferecer ao menos uma atividade em cada módulo e apresentar uma atividade por vez.
+
+Apêndice 2 Requisitos consolidados
+Requisitos da especificação revisada de 001-trilhas-ia. Os identificadores com letras preservam vínculos históricos. As regras abaixo orientam a nova versão; sua presença não atesta atendimento pelo código original.
+FR-013  As atividades deve priorizar situações-problema, tomada de decisão, comparação, identificação de erros, reflexão ou aplicação prática; não podem se basear exclusivamente em memorização.
+FR-014  Toda atividade deve apresentar feedback imediato e formativo para respostas corretas e incorretas, incluindo oportunidade de nova tentativa após erro; o texto deve permanecer disponível até uma ação explícita do estudante e explicar o conceito ou evidência da alternativa.
+FR-015  O sistema deve incluir um desafio final na trilha Explorador que avalie a análise crítica de uma resposta simulada de IA.
+FR-016  O sistema deve incluir um desafio final na trilha Usuário que exija uma estratégia de estudo com solicitação para aprender, exemplos, teste de conhecimentos, verificação e produção própria.
+FR-017  O sistema deve liberar Usuário após o desafio Explorador e oferecer iniciar agora ou voltar ao início sem perder a liberação; o convite deve continuar disponível ao retornar.
+FR-018  O sistema deve apresentar a conclusão do percurso após o desafio da trilha Usuário.
+FR-019  O sistema deve mostrar posição e próximo passo no nivelamento; trilha, módulo atual, módulos concluídos, objetivo e próximo passo nas trilhas; e síntese de término na conclusão.
+FR-019a  Em cada trilha, o sistema deve liberar o próximo módulo somente após a conclusão do módulo atual e deve manter os módulos concluídos disponíveis para revisão.
+FR-019b  Após iniciada, uma trilha deve não poder ser reiniciada e o progresso do estudante deve ser preservado, exceto no reinício global confirmado após concluir o percurso (FR-025).
+FR-020  O sistema deve deixar claro que IA não é fonte automaticamente confiável e incorporar práticas de verificação nas duas trilhas.
+FR-021  O sistema deve incentivar privacidade, cuidado com dados pessoais, responsabilidade e respeito à autoria, sem solicitar dados pessoais não necessários à experiência.
+FR-022  O sistema deve alinhar cada atividade a um objetivo de aprendizagem, a uma etapa da progressão pedagógica e a uma habilidade da BNCC Computação previamente definida e aprovada para o projeto; conteúdo sem essa identificação não pode ser incluído na trilha.
+FR-023  O sistema deve evitar IA conversacional para estudantes, correção automática por IA, atribuição de notas, avaliações formais, rankings e comparação entre estudantes nesta versão.
+
+Apêndice 3 Requisitos consolidados
+Requisitos da especificação revisada de 001-trilhas-ia. Os identificadores com letras preservam vínculos históricos. As regras abaixo orientam a nova versão; sua presença não atesta atendimento pelo código original.
+FR-024  O progresso deve ser recuperado após recarga quando o armazenamento estiver disponível. Estado inconsistente deve iniciar um percurso seguro. Falha de leitura ou gravação deve gerar aviso textual que explique os limites da retomada; a continuidade temporária não pode prometer salvamento.
+FR-025  Somente após concluir Usuário, o estudante deve poder reiniciar todo o percurso mediante confirmação. Cancelar deve preservar os dados; confirmar deve limpar somente o progresso deste projeto e retornar ao nivelamento inicial.
+FR-026  A entrada deve apresentar propósito, público Ensino Médio, duas trilhas, cuidados com dados e autoria e uma ação clara para iniciar o nivelamento, sem cadastro obrigatório.
+FR-027  O desafio Explorador deve exigir respostas às quatro questões e pelo menos três acertos. A devolutiva deve explicar cada decisão, permitir revisão após reprovação e incluir uma síntese própria não vazia do estudante sobre o que verificaria antes de usar a resposta simulada; texto só de espaços não atende ao preenchimento. A síntese é formativa, sem nota ou correção por IA.
+FR-028  O desafio Usuário deve exigir respostas às cinco questões, pelo menos três acertos e os cinco campos de estratégia preenchidos com texto não vazio. deve apresentar uma rubrica de autoavaliação: tema e objetivo; exemplo relacionado; teste com raciocínio próprio; fonte e comparação; produto e decisões autorais. Preenchimento não equivale a aprovação da qualidade pedagógica.
+FR-029  Após desafio concluído, retornar à trilha deve mostrar o resultado de conclusão e a ação seguinte sem exigir nova submissão; módulos concluídos deve continuar disponíveis para revisão.
+FR-030  O percurso deve evidenciar Conhecer → Compreender → Questionar → Verificar → Aprender → Criar, com a criação nos desafios. Cada desafio deve exibir objetivo, etapa e habilidade BNCC, assim como as atividades dos módulos.
+FR-031  Toda jornada deve funcionar por teclado, com foco visível, alternativas agrupadas e mensagens textuais. Após troca de questão, resultado, módulo ou desafio, o foco deve alcançar um título ou resumo correspondente; feedback deve ser anunciado sem avanço automático.
+FR-032  Texto comum deve ter contraste mínimo de 4,5:1; texto grande, 3:1; componentes e indicadores essenciais, 3:1. A interface deve funcionar em 320 px e zoom de 200%, sem perda de conteúdo ou ações; alvos de interação deve medir ao menos 44 × 44 px, incluindo área de rótulos.
+FR-033  Acesso direto a uma etapa bloqueada deve encaminhar à etapa permitida sem alterar progresso. Estado finalizado, perfil, pontuação e sequência de módulos deve ser coerentes.
+FR-034  Novos campos autorais deve orientar a não incluir dados pessoais e deve ser usados apenas nesta experiência. Rascunhos deve ser retomáveis quando o salvamento estiver disponível; nenhuma produção deve ser enviada a serviço externo ou avaliada automaticamente por IA.
+FR-035  Explicações e devolutivas deve usar de uma a três frases curtas por decisão, indicar a evidência ou conceito aplicável e orientar o próximo passo. Imagens informativas futuras deve ter descrição equivalente; imagens decorativas deve ser ignoráveis por tecnologias assistivas.
+
+Apêndice 4 Critérios de sucesso e fontes
+SC-001  Pelo menos 90% dos estudantes de teste conseguem iniciar, responder e concluir as 10 questões do nivelamento sem ajuda externa em até 12 minutos.
+SC-002  Em testes com casos de respostas predeterminados, 100% das classificações aplicam corretamente os dois critérios: mínimo de 5 pontos e mínimo de 2 acertos críticos.
+SC-003  Pelo menos 85% dos estudantes de teste identificam, ao final da trilha Explorador, ao menos três dos quatro elementos solicitados na análise da resposta simulada de IA.
+SC-004  Pelo menos 80% dos estudantes de teste que concluem a trilha Usuário entregam uma estratégia contendo os cinco elementos obrigatórios do desafio, após no máximo uma revisão guiada.
+SC-005  Pelo menos 90% dos estudantes de teste conseguem informar sua etapa atual e o próximo passo ao serem consultados durante qualquer módulo.
+SC-006  Nenhuma tela da versão inicial exibe notas, rankings, comparações entre estudantes ou funcionalidade de conversa livre com IA.
+SC-007  Em todos os dez módulos e dois desafios, a revisão encontra objetivo, etapa pedagógica e habilidade curricular; a sequência completa inclui uma produção do estudante em cada trilha.
+SC-008  Todos os cenários de retomada, acesso direto, revisão após desafio e cancelamento do reinício passam sem perda silenciosa de progresso, quando o salvamento está disponível.
+SC-009  As cinco páginas e suas ações podem ser usadas por teclado e em 320 px e zoom de 200%; os contrastes e alvos de interação atendem FR-032 em todos os estados habilitados.
+Protocolo de validação
+SC-001, SC-003, SC-004 e SC-005: observar ao menos dez estudantes e registrar amostra, contagens, percentuais, tempo e revisões, sem identificação pessoal. SC-002: aplicar vetores de fronteira e variar diagnósticas. SC-006 a SC-009: executar os cenários de quickstart.md. As metas permanecem pendentes até registro de evidência.
+Documentos de referência do projeto
+Na raiz IA-no-Ensino-Medio-1: index.html, nivelamento.html, explorador.html, usuario.html, conclusao.html, css/style.css e os cinco scripts em js/. Governança: .specify/memory/constitution.md.
+Em specs/001-trilhas-ia: spec.md; plan.md; research.md; data-model.md; tasks.md; quickstart.md; contracts/contrato-interface.md; analise-pasta.md; etapas-speckit.md; rastreabilidade.md; paginas/01-inicio.md a 05-conclusao.md; checklists/requirements.md e revisao-2026-10-02.md.
+Referência do fluxo
+GitHub Spec Kit. Agentic SDD. https://github.github.com/spec-kit/reference/agentic-sdd.html. Referência consultada na revisão documental do projeto. A integração local usa as skills no formato $speckit-nome.
